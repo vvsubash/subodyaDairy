@@ -1,5 +1,5 @@
 {
-  "name": "subodyaDairy",
+  "name": "subodyadairy",
   "version": "1.0.0",
   "description": "&#34;App for distribution of milk for small dairy farms&#34;",
   "author": "vvsubash",
@@ -10,10 +10,11 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "test": "jest"
+    "test": "jest",
+    "adj": "npx prettier --write \"**/*.{vue,js}\""
   },
   "lint-staged": {
-    "*.{js,vue}": "yarn lint",
+    "*.{js,vue}": "yarn lint --fix",
     "*.{css,vue}": "stylelint"
   },
   "husky": {
