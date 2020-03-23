@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h1>Dashboard</h1>
+    <p>
+      Hey Thanks for registring we are currently delivering to only gajuwaka
+      area
+    </p>
   </div>
 </template>
 
