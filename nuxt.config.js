@@ -14,7 +14,13 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      // {
+      //   rel: 'stylesheet',
+      //   href: 'https://unpkg.com/papercss@1.6.1/dist/paper.css'
+      // }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -23,11 +29,11 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['papercss/dist/paper.min.css'],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/firebaseImport.js', '~/plugins/authPersistense.js'],
   /*
    ** Nuxt.js dev-modules
    */
