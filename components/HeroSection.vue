@@ -6,20 +6,19 @@
       </h2>
     </div>
     <div class="sm-12 md-4 lg-2 col">
-      <div class="row flex-spaces child-borders">
-        <label class="paper-btn margin" for="modal-1">Click it now</label>
+      <div class="row flex-spaces">
+        <label class="paper-btn" for="modal-1">Click it now</label>
       </div>
       <input id="modal-1" class="modal-state" type="checkbox" />
       <div class="modal">
         <label class="modal-bg" for="modal-1"></label>
         <div class="modal-body">
           <label class="btn-close" for="modal-1">X</label>
-          <h4 class="modal-title">Modal Title</h4>
-          <h5 class="modal-subtitle">Modal Subtitle</h5>
-          <p class="modal-text">
-            This is an example of modal which is implemented with pure CSS! :D
-          </p>
-          <label for="modal-1">Nice!</label>
+          <h4 class="modal-title">Sign in</h4>
+          <h5 class="modal-subtitle">
+            Please Signin So we can serve you better
+          </h5>
+          <reactive-nav-button class="paper-btn margin" />
         </div>
       </div>
     </div>
@@ -27,7 +26,13 @@
 </template>
 
 <script>
-export default {}
+import ReactiveNavButton from '~/components/ReactiveNavButton.vue'
+
+export default {
+  components: {
+    ReactiveNavButton
+  }
+}
 </script>
 
 <style scoped></style>
