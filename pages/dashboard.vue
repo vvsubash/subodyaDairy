@@ -1,6 +1,10 @@
 <template>
-  <div>
-    <h1>Dashboard</h1>
+  <div class="container">
+    <p>Hello {{ this.$store.state.user }} continue</p>
+    <form class="form-group border col">
+      <label for="paperInputs1">Name</label>
+      <input type="text" placeholder="Nice input" />
+    </form>
   </div>
 </template>
 
