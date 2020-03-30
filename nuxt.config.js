@@ -22,6 +22,7 @@ export default {
       }
     ],
     script: [{ src: 'https://checkout.razorpay.com/v1/checkout.js' }]
+
   },
   /*
    ** Customize the progress-bar color
@@ -30,7 +31,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['papercss/dist/paper.min.css'],
   /*
    ** Plugins to load before mounting the App
    */

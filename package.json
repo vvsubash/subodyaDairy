@@ -25,9 +25,11 @@
     "core-js": "2",
     "firebase": "^7.6.0",
     "nuxt": "^2.0.0",
+    "papercss": "^1.6.1",
     "vuexfire": "^3.2.0"
   },
   "devDependencies": {
+    "@architect/sandbox": "^1.8.1",
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/stylelint-module": "^3.1.0",
