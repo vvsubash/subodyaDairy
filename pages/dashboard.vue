@@ -38,7 +38,7 @@
       </div>
       <input type="submit" value="Submit & Get Subscribed" />
     </form>
-  </div>
+ </div>
 </template>
 
 <script>

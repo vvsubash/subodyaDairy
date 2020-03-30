@@ -6,13 +6,19 @@
       </h2>
     </div>
     <div class="sm-12 md-4 lg-2 col">
-      <button>Click to Subscribe</button>
+      <UserStateModal />
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import UserStateModal from '~/components/UserStateModal.vue'
+
+export default {
+  components: {
+    UserStateModal
+  }
+}
 </script>
 
 <style scoped></style>
