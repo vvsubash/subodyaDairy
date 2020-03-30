@@ -17,12 +17,9 @@
     "*.{js,vue}": "yarn lint --fix",
     "*.{css,vue}": "stylelint"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
+
   "dependencies": {
+    "@nuxtjs/axios": "^5.9.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
     "core-js": "2",
