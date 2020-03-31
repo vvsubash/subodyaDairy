@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      price: 0
+      price: 599
     }
   },
   methods: {
@@ -36,7 +36,7 @@ export default {
       // eslint-disable-next-line no-var
       var options = {
         key: 'rzp_test_vLUpWWam4Z8FgN',
-        amount: '59900', /// The amount is shown in currency subunits. Actual amount is ₹599.
+        // amount: '59900', /// The amount is shown in currency subunits. Actual amount is ₹599.
         name: 'Subodaya Dairy',
         currency: 'INR', // Optional. Same as the Order currency
         description: 'Purchase Description',
