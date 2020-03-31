@@ -14,15 +14,7 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: 'https://unpkg.com/papercss@1.6.1/dist/paper.css'
-      }
-    ],
-    script: [{ src: 'https://checkout.razorpay.com/v1/checkout.js' }]
-
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   /*
    ** Customize the progress-bar color
