@@ -1,4 +1,7 @@
-import firebase from 'firebase'
+import * as firebase from 'firebase/app'
+
+import 'firebase/auth'
+
 // import { vuexfireMutations, firestoreAction } from 'vuexfire'
 // import db from '~/plugins/firebaseImport'
 export const state = () => ({
