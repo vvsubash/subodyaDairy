@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 export default {
   data() {
     return {
@@ -16,7 +16,7 @@ export default {
   methods: {
     // Initializing the payment request
     makePayment() {
-      axios
+      this.$axios
         .post('https://us-central1-ssss-ss.cloudfunctions.net/sap/', {
           amount: this.price * 100
         })
@@ -57,7 +57,7 @@ export default {
       }
     },
     verifySignature(response) {
-      axios
+      this.$axios
         .post('https://us-central1-ssss-ss.cloudfunctions.net/csap/', response)
         .then((res) => {
           // eslint-disable-next-line no-console
@@ -68,6 +68,11 @@ export default {
           // eslint-disable-next-line no-console
           console.log('error')
         })
+    }
+  },
+  head() {
+    return {
+      script: [{ src: 'https://checkout.razorpay.com/v1/checkout.js' }]
     }
   }
 }
