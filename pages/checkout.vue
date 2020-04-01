@@ -17,7 +17,7 @@ export default {
     // Initializing the payment request
     makePayment() {
       this.$axios
-        .post('https://us-central1-ssss-ss.cloudfunctions.net/sap/', {
+        .post('https://asia-east2-ssss-ss.cloudfunctions.net/papi/', {
           amount: this.price * 100
         })
         .then((response) => {
@@ -58,7 +58,7 @@ export default {
     },
     verifySignature(response) {
       this.$axios
-        .post('https://us-central1-ssss-ss.cloudfunctions.net/csap/', response)
+        .post('https://asia-east2-ssss-ss.cloudfunctions.net/papi-1/', response)
         .then((res) => {
           // eslint-disable-next-line no-console
           console.log('PAYMENT RESPONSE', res.data)
