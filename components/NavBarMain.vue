@@ -18,6 +18,9 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Price</a></li>
+            <li v-if="this.$store.state.user != null">
+              <a @click="signOut">Sign Out </a>
+            </li>
             <li><ReactiveNavButton /></li>
           </ul>
         </div>
@@ -27,10 +30,17 @@
 </template>
 
 <script>
+// eslint-disable-next-line
+import { mapState } from 'vuex'
 import ReactiveNavButton from '~/components/ReactiveNavButton.vue'
 export default {
   components: {
     ReactiveNavButton
+  },
+  methods: {
+    signOut() {
+      this.$store.dispatch('SignOut')
+    }
   }
 }
 </script>
