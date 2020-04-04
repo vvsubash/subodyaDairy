@@ -49,21 +49,21 @@ export const actions = {
         // const credential = error.credential
         // ...
       })
+  },
+  SignOut({ commit }) {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        // eslint-disable-next-line
+        console.log('signed out')
+      })
+    commit('setUser', null)
   }
-  //   SignOut({ commit }) {
-  //     firebase
-  //       .auth()
-  //       .signOut()
-  //       .then(() => {
-  //         // eslint-disable-next-line
-  //         console.log('signed out')
-  //       })
-  //     commit('setUser', null)
-  //   },
-  //   initStore: firestoreAction(({ bindFirestoreRef }) => {
-  //     bindFirestoreRef(
-  //       'animals',
-  //       db.collection('users/UCNOln8XPzN4rTNnfn57lUjQ8Zb2/cows')
-  //     )
-  //   })
+  // initStore: firestoreAction(({ bindFirestoreRef }) => {
+  //   bindFirestoreRef(
+  //     'animals',
+  //     db.collection('users/UCNOln8XPzN4rTNnfn57lUjQ8Zb2/cows')
+  //   )
+  // })
 }
