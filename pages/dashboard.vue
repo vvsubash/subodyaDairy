@@ -1,16 +1,20 @@
 <template>
   <div class="container">
-    <h3>Hello {{ this.$store.state.user }} continue</h3>
+    <h3>
+      Hello {{ this.$store.state.user }} please give us some details about you
+      to continue
+    </h3>
     <form class="form-group border col" @submit.prevent="lol">
       <div class="form-group">
-        <label for="paperInputs1">Name</label>
+        <label for="paperInputs1">Display Name</label>
+        <sub></sub>
         <input v-model="userName" class="input-block" />
       </div>
       <div class="form-group">
         <label for="paperInputs1">Phone Number</label>
         <input v-model="phoneNumber" class="input-block" />
       </div>
-      <div class="form-group">
+      <!-- <div class="form-group">
         <h3>Address</h3>
         <label for="paperInputs1">Door Number</label>
         <input v-model="phoneNumber" class="input-block" />
@@ -35,7 +39,7 @@
             <span>I Agree to make a token payment</span>
           </label>
         </fieldset>
-      </div>
+      </div> -->
       <input type="submit" />
     </form>
   </div>

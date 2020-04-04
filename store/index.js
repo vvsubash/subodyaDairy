@@ -25,7 +25,7 @@ export const mutations = {
 export const actions = {
   signInWithGoogle({ commit }) {
     const provider = new firebase.auth.GoogleAuthProvider()
-    // provider.addScope('https://www.googleapis.com/auth/calendar')
+    provider.addScope('https://www.googleapis.com/auth/user.phonenumbers.read	')
     firebase
       .auth()
       .signInWithPopup(provider)

@@ -18,6 +18,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Price</a></li>
+            <li><a @click="signOut">Sign Out </a></li>
             <li><ReactiveNavButton /></li>
           </ul>
         </div>
@@ -31,7 +32,12 @@ import ReactiveNavButton from '~/components/ReactiveNavButton.vue'
 export default {
   components: {
     ReactiveNavButton
-  }
+  },
+  methods: {
+    signOut() {
+      
+    }
+  },
 }
 </script>
 
