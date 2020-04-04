@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      price: 599
+      price: 50
     }
   },
   methods: {
