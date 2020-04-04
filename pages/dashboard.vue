@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <p>Hello {{ this.$store.state.user }} continue</p>
-    <form class="form-group border col">
+  <div class="container">
+    <h3>Hello {{ this.$store.state.user }} continue</h3>
+    <form class="form-group border col" @submit.prevent="lol">
       <div class="form-group">
         <label for="paperInputs1">Name</label>
         <input v-model="userName" class="input-block" />
@@ -36,7 +36,7 @@
           </label>
         </fieldset>
       </div>
-      <input type="submit" value="Submit & Get Subscribed" />
+      <input type="submit" />
     </form>
   </div>
 </template>
@@ -48,6 +48,11 @@ export default {
       userName: this.$store.state.user,
       phoneNumber: 9123451234,
       pinCode: 530003
+    }
+  },
+  methods: {
+    lol() {
+      this.$router.push('checkout')
     }
   }
 }
