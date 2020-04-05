@@ -2,7 +2,9 @@
   <div class="row">
     <nav class="split-nav col">
       <div class="nav-brand">
-        <h3><a href="#">Swatch Milk</a></h3>
+        <h3>
+          <a href="#">Swatch Milk</a>
+        </h3>
       </div>
       <div class="collapsible">
         <input id="collapsible1" type="checkbox" name="collapsible1" />
@@ -15,13 +17,21 @@
         </button>
         <div class="collapsible-body">
           <ul class="inline">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Price</a></li>
-            <li v-if="this.$store.state.user != null">
-              <a @click="signOut">Sign Out </a>
+            <li>
+              <a href="/">Home</a>
             </li>
-            <li><ReactiveNavButton /></li>
+            <li>
+              <a href="/aboutus">About Us</a>
+            </li>
+            <li>
+              <a href="/price">Price</a>
+            </li>
+            <li>
+              <ReactiveNavButton />
+            </li>
+            <li v-if="this.$store.state.user != null">
+              <a @click="signOut">Sign Out</a>
+            </li>
           </ul>
         </div>
       </div>
