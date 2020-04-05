@@ -1,5 +1,5 @@
 <template>
-  <div v-if="user === null">
+  <div v-if="user == null">
     <div class="row flex-spaces">
       <label class="paper-btn" for="modal-1">Click it now</label>
     </div>
@@ -9,16 +9,12 @@
       <div class="modal-body">
         <label class="btn-close" for="modal-1">X</label>
         <h4 class="modal-title">Sign in</h4>
-        <h5 class="modal-subtitle">
-          Please Signin So we can serve you better
-        </h5>
+        <h5 class="modal-subtitle">Please Signin So we can serve you better</h5>
         <reactive-nav-button class="paper-btn margin" />
       </div>
     </div>
   </div>
-  <div v-else>
-    {{ user }}
-  </div>
+  <div v-else>{{ user }}</div>
 </template>
 
 <script>
@@ -32,7 +28,7 @@ export default {
   },
   data() {
     return {
-      user: this.$store.state.user
+      // user: this.$store.state.user.displayName
     }
   }
 }

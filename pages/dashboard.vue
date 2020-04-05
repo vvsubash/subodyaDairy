@@ -1,8 +1,9 @@
 <template>
-  <div class="container">
+  <div v-if="this.$store.state.user == null">fh</div>
+  <div v-else class="container">
     <h3>
-      Hello {{ this.$store.state.user }} please give us some details about you
-      to continue
+      Hello {{ this.$store.state.user.displayName }} please give us some details
+      about you to continue
     </h3>
     <form class="form-group border col" @submit.prevent="lol">
       <div class="form-group">
@@ -49,9 +50,9 @@
 export default {
   data() {
     return {
-      userName: this.$store.state.user,
-      phoneNumber: 9123451234,
-      pinCode: 530003
+      // userName: this.$store.state.user.displayName,
+      // phoneNumber: this.$store.state.user.phoneNumber,
+      // pinCode: 530003
     }
   },
   methods: {

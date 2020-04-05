@@ -32,8 +32,11 @@ export const actions = {
       .then(function(result) {
         // This gives you a Google Access Token. You can use it to access the Google API.
         // The signed-in user info.
-        const user = result.user
-        commit('setUser', user.displayName)
+        const user = {
+          ...result.user.providerData[0],
+          uid: result.uid
+        }
+        commit('setUser', user)
         // eslint-disable-next-line
         console.log(result)
       })
