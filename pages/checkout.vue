@@ -35,7 +35,7 @@ export default {
       //  create options object when creating order
       // eslint-disable-next-line no-var
       var options = {
-        key: 'rzp_test_vLUpWWam4Z8FgN',
+        key: 'rzp_live_bUOLVoGDfwKiUh',
         // amount: '59900', /// The amount is shown in currency subunits. Actual amount is ₹599.
         name: 'Subodaya Dairy',
         currency: 'INR', // Optional. Same as the Order currency
