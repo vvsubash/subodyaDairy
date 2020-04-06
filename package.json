@@ -11,7 +11,7 @@
     "generate": "nuxt generate --modern",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest",
-    "adj": "npx prettier --write \"**/*.{vue,js}\""
+    "prettify": "npx prettier --write \"**/*.{vue,js}\""
   },
   "lint-staged": {
     "*.{js,vue}": "yarn lint --fix",
