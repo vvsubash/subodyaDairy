@@ -1,10 +1,6 @@
 <template>
-  <div v-if="this.$store.state.user == null">fh</div>
-  <div v-else class="container">
-    <h3>
-      Hello {{ this.$store.state.user.displayName }} please give us some details
-      about you to continue
-    </h3>
+  <div class="container">
+    <h3>Hello {{ userName }} please give us some details about you to continue</h3>
     <form class="form-group border col" @submit.prevent="lol">
       <div class="form-group">
         <label for="paperInputs1">Display Name</label>
@@ -13,7 +9,7 @@
       </div>
       <div class="form-group">
         <label for="paperInputs1">Phone Number</label>
-        <input v-model="phoneNumber" class="input-block" />
+        <input class="input-block" />
       </div>
       <!-- <div class="form-group">
         <h3>Address</h3>
@@ -40,7 +36,7 @@
             <span>I Agree to make a token payment</span>
           </label>
         </fieldset>
-      </div> -->
+      </div>-->
       <input type="submit" />
     </form>
   </div>
@@ -50,15 +46,28 @@
 export default {
   data() {
     return {
-      // userName: this.$store.state.user.displayName,
+      // userName: ,
       // phoneNumber: this.$store.state.user.phoneNumber,
-      // pinCode: 530003
+      pinCode: 530003
     }
   },
+  watch: {
+    userName(newValue, oldValue) {
+      return this.$store.state.user.displayName
+    }
+  },
+  // computed: {
+  //   userName() {
+  //     return this.$store.state.user.displayName
+  //   }
+  // },
   methods: {
     lol() {
       this.$router.push('checkout')
     }
+  },
+  validate({ store }) {
+    return store.state.user != null
   }
 }
 </script>
