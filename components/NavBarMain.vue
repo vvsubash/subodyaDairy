@@ -18,13 +18,13 @@
         <div class="collapsible-body">
           <ul class="inline">
             <li>
-              <nuxt-link href="/">Home</nuxt-link>
+              <nuxt-link to="/">Home</nuxt-link>
             </li>
             <li>
-              <nuxt-link href="/aboutus">About Us</nuxt-link>
+              <nuxt-link to="/aboutus">About Us</nuxt-link>
             </li>
             <li>
-              <nuxt-link href="/price">Price</nuxt-link>
+              <nuxt-link to="/price">Price</nuxt-link>
             </li>
             <li>
               <ReactiveNavButton />
