@@ -1,9 +1,9 @@
 import * as firebase from 'firebase/app'
-
 import 'firebase/auth'
-
+import 'firebase/firestore'
 import { vuexfireMutations, firestoreAction } from 'vuexfire'
 import db from '~/plugins/firebaseImport'
+
 export const state = () => ({
   user: null,
   hasPaid: []
@@ -40,6 +40,9 @@ export const actions = {
         // eslint-disable-next-line
         console.log(result)
       })
+      .then(() => {
+        this.$router.push('/dashboard')
+      })
       .catch(function(error) {
         // eslint-disable-next-line
         console.log(error.code)
@@ -58,15 +61,13 @@ export const actions = {
       .auth()
       .signOut()
       .then(() => {
+        this.$router.push('/')
         // eslint-disable-next-line
         console.log('signed out')
       })
     commit('setUser', null)
   },
   initStore: firestoreAction(({ bindFirestoreRef }) => {
-    bindFirestoreRef(
-      'hasPaid',
-      db.collection(`users/${this.$store.state.user.uid}`)
-    )
+    return bindFirestoreRef('hasPaid', db.collection('users'))
   })
 }
