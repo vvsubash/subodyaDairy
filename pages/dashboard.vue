@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <h3>Hello {{ userName }} please give us some details about you to continue</h3>
+    <h3>
+      Hello {{ userName }} please give us some details about you to continue
+    </h3>
     <form class="form-group border col" @submit.prevent="lol">
       <div class="form-group">
         <label for="paperInputs1">Display Name</label>
@@ -39,6 +41,7 @@
       </div>-->
       <input type="submit" />
     </form>
+    {{ this.$store.state.hasPaid }}
   </div>
 </template>
 

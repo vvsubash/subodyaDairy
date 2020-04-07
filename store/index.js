@@ -2,11 +2,11 @@ import * as firebase from 'firebase/app'
 
 import 'firebase/auth'
 
-// import { vuexfireMutations, firestoreAction } from 'vuexfire'
-// import db from '~/plugins/firebaseImport'
+import { vuexfireMutations, firestoreAction } from 'vuexfire'
+import db from '~/plugins/firebaseImport'
 export const state = () => ({
-  user: null
-  // animals: []
+  user: null,
+  hasPaid: []
 })
 
 export const getters = {
@@ -18,8 +18,8 @@ export const getters = {
 export const mutations = {
   setUser: (state, payload) => {
     state.user = payload
-  }
-  // ...vuexfireMutations
+  },
+  ...vuexfireMutations
 }
 
 export const actions = {
@@ -62,11 +62,11 @@ export const actions = {
         console.log('signed out')
       })
     commit('setUser', null)
-  }
-  // initStore: firestoreAction(({ bindFirestoreRef }) => {
-  //   bindFirestoreRef(
-  //     'animals',
-  //     db.collection('users/UCNOln8XPzN4rTNnfn57lUjQ8Zb2/cows')
-  //   )
-  // })
+  },
+  initStore: firestoreAction(({ bindFirestoreRef }) => {
+    bindFirestoreRef(
+      'hasPaid',
+      db.collection(`users/${this.$store.state.user.uid}`)
+    )
+  })
 }
