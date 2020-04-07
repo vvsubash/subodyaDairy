@@ -1,7 +1,7 @@
 <template>
-  <a @click="signin">{{
+  <nuxt-link @click="signin">{{
     this.$store.state.user != null ? 'Go To Dashboard' : 'Login'
-  }}</a>
+  }}</nuxt-link>
 </template>
 
 <script>
