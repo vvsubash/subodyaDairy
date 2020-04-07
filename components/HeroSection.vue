@@ -1,7 +1,7 @@
 <template>
   <div class="row flex-middle flex-center">
     <div class="sm-12 md-8 col">
-      <h2 class="">
+      <h2 class="mu">
         Get Organic Milk Delivered to Your House with Click of a Button
       </h2>
     </div>
@@ -21,4 +21,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.mu {
+  margin: unset;
+}
+</style>

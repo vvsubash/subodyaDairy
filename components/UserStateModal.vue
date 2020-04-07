@@ -1,8 +1,6 @@
 <template>
   <div v-if="user == null">
-    <div class="row flex-spaces">
-      <label class="paper-btn" for="modal-1">Click it now</label>
-    </div>
+    <label class="paper-btn" for="modal-1">Click it now</label>
     <input id="modal-1" class="modal-state" type="checkbox" />
     <div class="modal">
       <label class="modal-bg" for="modal-1"></label>
