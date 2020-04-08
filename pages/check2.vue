@@ -8,13 +8,13 @@
 <script>
 import RazorPayButton from '~/components/RazorPayButton'
 export default {
+  components: {
+    RazorPayButton
+  },
   data() {
     return {
       price: 50
     }
-  },
-  components: {
-    RazorPayButton
   }
 }
 </script>
