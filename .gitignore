@@ -155,3 +155,6 @@ sw.*
 # Vim swap files
 *.swp
 >>>>>>> 1.0.0-alpha
+
+# Local Netlify folder
+.netlify

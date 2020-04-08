@@ -1,12 +1,12 @@
 import * as firebase from 'firebase/app'
-
 import 'firebase/auth'
+import 'firebase/firestore'
+import { vuexfireMutations, firestoreAction } from 'vuexfire'
+import db from '~/plugins/firebaseImport'
 
-// import { vuexfireMutations, firestoreAction } from 'vuexfire'
-// import db from '~/plugins/firebaseImport'
 export const state = () => ({
-  user: null
-  // animals: []
+  user: null,
+  hasPaid: []
 })
 
 export const getters = {
@@ -18,8 +18,8 @@ export const getters = {
 export const mutations = {
   setUser: (state, payload) => {
     state.user = payload
-  }
-  // ...vuexfireMutations
+  },
+  ...vuexfireMutations
 }
 
 export const actions = {
@@ -32,10 +32,16 @@ export const actions = {
       .then(function(result) {
         // This gives you a Google Access Token. You can use it to access the Google API.
         // The signed-in user info.
-        const user = result.user
-        commit('setUser', user.displayName)
+        const user = {
+          ...result.user.providerData[0],
+          uid: result.uid
+        }
+        commit('setUser', user)
         // eslint-disable-next-line
         console.log(result)
+      })
+      .then(() => {
+        this.$router.push('/dashboard')
       })
       .catch(function(error) {
         // eslint-disable-next-line
@@ -55,15 +61,18 @@ export const actions = {
       .auth()
       .signOut()
       .then(() => {
+        this.$router.push('/')
         // eslint-disable-next-line
         console.log('signed out')
       })
     commit('setUser', null)
-  }
-  // initStore: firestoreAction(({ bindFirestoreRef }) => {
-  //   bindFirestoreRef(
-  //     'animals',
-  //     db.collection('users/UCNOln8XPzN4rTNnfn57lUjQ8Zb2/cows')
-  //   )
-  // })
+  },
+  initStore: firestoreAction(({ state, bindFirestoreRef }) => {
+    // eslint-disable-next-line no-console
+    console.log('hello')
+    return bindFirestoreRef(
+      'hasPaid',
+      db.collection('users').doc(state.user.uid)
+    )
+  })
 }

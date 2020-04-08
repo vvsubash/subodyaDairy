@@ -1,16 +1,13 @@
 <template>
-  <div>
-    <input v-model="price" type="text" />
-    <button @click="makePayment">GO</button>
-  </div>
+  <button @click="makePayment">GO</button>
 </template>
 
 <script>
-// import axios from 'axios'
 export default {
-  data() {
-    return {
-      price: 599
+  props: {
+    price: {
+      type: Number,
+      default: 50
     }
   },
   methods: {
@@ -35,8 +32,7 @@ export default {
       //  create options object when creating order
       // eslint-disable-next-line no-var
       var options = {
-        key: 'rzp_test_vLUpWWam4Z8FgN',
-        // amount: '59900', /// The amount is shown in currency subunits. Actual amount is ₹599.
+        key: 'rzp_live_bUOLVoGDfwKiUh',
         name: 'Subodaya Dairy',
         currency: 'INR', // Optional. Same as the Order currency
         description: 'Purchase Description',
@@ -45,8 +41,8 @@ export default {
           this.verifySignature(response)
         },
         prefill: {
-          name: 'Venkat',
-          email: 'venkat@suba.sh'
+          name: this.$store.state.user.displayName,
+          email: this.$store.state.user.email
         },
         notes: {
           address: 'Hello World'
@@ -77,3 +73,5 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped></style>

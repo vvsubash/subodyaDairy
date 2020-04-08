@@ -1,7 +1,7 @@
 <template>
-  <a @click="signin">
-    {{ this.$store.state.user != null ? this.$store.state.user : 'Login' }}
-  </a>
+  <a @click="signin">{{
+    this.$store.state.user != null ? 'Go To Dashboard' : 'Login'
+  }}</a>
 </template>
 
 <script>

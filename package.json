@@ -11,13 +11,12 @@
     "generate": "nuxt generate --modern",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest",
-    "adj": "npx prettier --write \"**/*.{vue,js}\""
+    "prettify": "npx prettier --write \"**/*.{vue,js}\""
   },
   "lint-staged": {
     "*.{js,vue}": "yarn lint --fix",
     "*.{css,vue}": "stylelint"
   },
-
   "dependencies": {
     "@nuxtjs/axios": "^5.9.6",
     "@nuxtjs/dotenv": "^1.4.0",
@@ -29,7 +28,6 @@
     "vuexfire": "^3.2.0"
   },
   "devDependencies": {
-    "@architect/sandbox": "^1.8.1",
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/stylelint-module": "^3.1.0",
