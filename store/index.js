@@ -67,7 +67,12 @@ export const actions = {
       })
     commit('setUser', null)
   },
-  initStore: firestoreAction(({ bindFirestoreRef }) => {
-    return bindFirestoreRef('hasPaid', db.collection('users'))
+  initStore: firestoreAction(({ state, bindFirestoreRef }) => {
+    // eslint-disable-next-line no-console
+    console.log('hello')
+    return bindFirestoreRef(
+      'hasPaid',
+      db.collection('users').doc(state.user.uid)
+    )
   })
 }
