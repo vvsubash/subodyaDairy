@@ -50,8 +50,8 @@
 export default {
   data() {
     return {
-      // userName: ,
-      // phoneNumber: this.$store.state.user.phoneNumber,
+      userName: null,
+      phoneNumber: this.$store.state.user.phoneNumber,
       pinCode: 530003
     }
   },
