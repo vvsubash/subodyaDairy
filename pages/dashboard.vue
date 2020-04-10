@@ -41,7 +41,7 @@
       </div>-->
       <input type="submit" />
     </form>
-    <button @click="lol2">hh</button>
+    <button>hh</button>
     {{ this.$store.state.hasPaid }}
   </div>
 </template>
@@ -65,12 +65,13 @@ export default {
   //     return this.$store.state.user.displayName
   //   }
   // },
+  updated() {},
+  created() {
+    this.$store.dispatch('initStore')
+  },
   methods: {
     lol() {
       this.$router.push('checkout')
-    },
-    lol2() {
-      this.$store.dispatch('initStore')
     }
   },
   validate({ store }) {
