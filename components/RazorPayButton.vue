@@ -14,7 +14,7 @@ export default {
     // Initializing the payment request
     makePayment() {
       this.$axios
-        .post('process.env.PAYMENT_API', {
+        .post(process.env.PAYMENT_API, {
           amount: this.price * 100
         })
         .then((response) => {
@@ -32,7 +32,7 @@ export default {
       //  create options object when creating order
       // eslint-disable-next-line no-var
       var options = {
-        key: 'process.env.RAZORPAY_KEY_ID',
+        key: process.env.RAZORPAY_KEY_ID,
         name: 'Subodaya Dairy',
         currency: 'INR', // Optional. Same as the Order currency
         description: 'Purchase Description',
@@ -54,7 +54,7 @@ export default {
     },
     verifySignature(response) {
       this.$axios
-        .post('process.env.PAYMENT_CONFIRMATION_API', response)
+        .post(process.env.PAYMENT_CONFIRMATION_API, response)
         .then((res) => {
           // eslint-disable-next-line no-console
           console.log('PAYMENT RESPONSE', res.data)
