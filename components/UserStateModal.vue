@@ -26,7 +26,7 @@ export default {
   },
   data() {
     return {
-      // user: this.$store.state.user.displayName
+      user: this.$store.state.user
     }
   }
 }
