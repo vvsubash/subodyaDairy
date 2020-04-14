@@ -41,8 +41,6 @@
       </div>-->
       <input type="submit" />
     </form>
-    <button>hh</button>
-    {{ this.$store.state.hasPaid }}
   </div>
 </template>
 
@@ -55,19 +53,8 @@ export default {
       pinCode: 530003
     }
   },
-  watch: {
-    userName(newValue, oldValue) {
-      return this.$store.state.user.displayName
-    }
-  },
-  // computed: {
-  //   userName() {
-  //     return this.$store.state.user.displayName
-  //   }
-  // },
-  updated() {},
   created() {
-    this.$store.dispatch('initStore')
+    this.$store.dispatch('getUserInfo/getUserInfo')
   },
   methods: {
     lol() {
