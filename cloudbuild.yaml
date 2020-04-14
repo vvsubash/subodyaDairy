@@ -5,5 +5,5 @@ steps:
   args: ['install']
 # Run custom commands
 - name: node
-  entrypoint: npm
+  entrypoint: yarn
   args: ['generate']
