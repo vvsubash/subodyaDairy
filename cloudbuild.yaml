@@ -11,7 +11,7 @@ steps:
   # Install dependencies
   - name: node
     entrypoint: yarn
-    args: ['install --production']
+    args: ['install']
   # Run custom commands
   - name: node
     entrypoint: yarn
