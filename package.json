@@ -11,7 +11,8 @@
     "generate": "nuxt generate --modern",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest",
-    "prettify": "npx prettier --write \"**/*.{vue,js}\""
+    "prettify": "npx prettier --write \"**/*.{vue,js}\"",
+    "deploy": "firebase deploy --debug --token \"$FIREBASE_TOKEN\""
   },
   "lint-staged": {
     "*.{js,vue}": "yarn lint --fix",

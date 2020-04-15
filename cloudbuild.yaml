@@ -16,3 +16,6 @@ steps:
   - name: node
     entrypoint: yarn
     args: ['generate']
+  # Deploy
+  - name: 'gcr.io/ssss-ss/firebase'
+    args: ['deploy']
