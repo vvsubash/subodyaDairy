@@ -12,7 +12,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest",
     "prettify": "npx prettier --write \"**/*.{vue,js}\"",
-    "deploy": "firebase deploy --debug --token \"$FIREBASE_TOKEN\""
+    "deploy": "firebase deploy --debug --token \"$FIREBASE_TOKEN\"  --only hosting"
   },
   "lint-staged": {
     "*.{js,vue}": "yarn lint --fix",
