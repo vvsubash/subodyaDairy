@@ -49,6 +49,7 @@ export default {
   ],
   sitemap: {
     // custom configuration
+    hostname: 'https://www.subash.rocks',
   },
 
   /*
