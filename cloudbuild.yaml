@@ -11,11 +11,12 @@ steps:
   # Install dependencies
   - name: node
     entrypoint: yarn
-    args: ['install']
+    args: ['install --production']
   # Run custom commands
   - name: node
     entrypoint: yarn
     args: ['generate']
   # Deploy
   - name: 'gcr.io/ssss-ss/firebase'
+    entrypoint: yarn
     args: ['deploy']
