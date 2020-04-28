@@ -26,6 +26,7 @@
     "core-js": "2",
     "firebase": "^7.6.0",
     "nuxt": "^2.0.0",
+    "nuxt-brotli": "^1.1.1",
     "papercss": "^1.6.1",
     "vuexfire": "^3.2.0"
   },

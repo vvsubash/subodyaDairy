@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import HeroSection from '~/components/HeroSection'
+import HeroSection from '~/components/hero-section'
 export default {
   components: {
     HeroSection
