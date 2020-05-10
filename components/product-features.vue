@@ -1,7 +1,7 @@
 <template>
   <div class="row flex-middle flex-center">
     <div class="sm-6 md-5 lg-2 col">
-      <img src="https://picsum.photos/300/200" alt="reusableb2" />
+      <img src="https://picsum.photos/273/196" alt="reusableb2" />
     </div>
     <div class="sm-12 md-7 col">
       <h2>
