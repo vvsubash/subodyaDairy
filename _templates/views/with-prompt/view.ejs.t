@@ -1,13 +1,10 @@
 ---
-to: _templates/<%= name %>/<%= action || 'new' %>/<%= name %>.ejs.t
----
----
 to: app/hello.js
 ---
 const hello = ```
 Hello!
-This is your first hygen template.
-
+This is your first prompt based hygen template.
+<%= message %>
 Learn what it can do here:
 
 https://github.com/jondot/hygen
