@@ -12,7 +12,11 @@
       </div>
     </div>
   </div>
-  <div v-else>{{ user }}</div>
+  <div v-else>
+    <nuxt-link to="dashboard">
+      <h5>{{ user.displayName }}'s Dashboard</h5>
+    </nuxt-link>
+  </div>
 </template>
 
 <script>
