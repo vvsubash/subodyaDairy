@@ -49,6 +49,9 @@ export default {
     '@nuxtjs/dotenv',
     'nuxt-brotli'
   ],
+  pwa: {
+    offline: false
+  },
   sitemap: {
     // custom configuration
     hostname: 'https://www.subash.rocks'
