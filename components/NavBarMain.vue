@@ -8,7 +8,7 @@
       </div>
       <div class="collapsible">
         <input id="collapsible1" type="checkbox" name="collapsible1" />
-        <button>
+        <button name="hidden-nav">
           <label for="collapsible1">
             <div class="bar1"></div>
             <div class="bar2"></div>
