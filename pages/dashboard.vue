@@ -41,8 +41,6 @@
       </div>-->
       <input type="submit" />
     </form>
-    <button @click="lol2">hh</button>
-    {{ this.$store.state.hasPaid }}
   </div>
 </template>
 
@@ -55,22 +53,12 @@ export default {
       pinCode: 530003
     }
   },
-  watch: {
-    userName(newValue, oldValue) {
-      return this.$store.state.user.displayName
-    }
+  created() {
+    this.$store.dispatch('getUserInfo/getUserInfo')
   },
-  // computed: {
-  //   userName() {
-  //     return this.$store.state.user.displayName
-  //   }
-  // },
   methods: {
     lol() {
       this.$router.push('checkout')
-    },
-    lol2() {
-      this.$store.dispatch('initStore')
     }
   },
   validate({ store }) {

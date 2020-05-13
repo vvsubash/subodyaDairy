@@ -35,7 +35,9 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module'
+    '@nuxtjs/stylelint-module',
+    '@nuxtjs/sitemap',
+    'nuxt-brotli'
   ],
   /*
    ** Nuxt.js modules
@@ -44,8 +46,16 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    'nuxt-brotli'
   ],
+  pwa: {
+    offline: false
+  },
+  sitemap: {
+    // custom configuration
+    hostname: 'https://www.subash.rocks'
+  },
 
   /*
    ** Build configuration

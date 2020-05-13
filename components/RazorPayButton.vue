@@ -1,5 +1,5 @@
 <template>
-  <button @click="makePayment">GO</button>
+  <button name="ckickToPay" @click="makePayment">GO</button>
 </template>
 
 <script>

@@ -1,12 +1,9 @@
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
-import 'firebase/firestore'
-import { vuexfireMutations, firestoreAction } from 'vuexfire'
-import db from '~/plugins/firebaseImport'
+import { vuexfireMutations } from 'vuexfire'
 
 export const state = () => ({
-  user: null,
-  hasPaid: []
+  user: null
 })
 
 export const getters = {
@@ -66,13 +63,5 @@ export const actions = {
         console.log('signed out')
       })
     commit('setUser', null)
-  },
-  initStore: firestoreAction(({ state, bindFirestoreRef }) => {
-    // eslint-disable-next-line no-console
-    console.log('hello')
-    return bindFirestoreRef(
-      'hasPaid',
-      db.collection('users').doc(state.user.uid)
-    )
-  })
+  }
 }

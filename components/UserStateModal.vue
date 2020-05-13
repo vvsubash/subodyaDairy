@@ -1,6 +1,6 @@
 <template>
   <div v-if="user == null">
-    <label class="paper-btn" for="modal-1">Click it now</label>
+    <label class="paper-btn btn-primary" for="modal-1">Click it now</label>
     <input id="modal-1" class="modal-state" type="checkbox" />
     <div class="modal">
       <label class="modal-bg" for="modal-1"></label>
@@ -12,7 +12,11 @@
       </div>
     </div>
   </div>
-  <div v-else>{{ user }}</div>
+  <div v-else>
+    <nuxt-link to="dashboard">
+      <h5>{{ user.displayName }}'s Dashboard</h5>
+    </nuxt-link>
+  </div>
 </template>
 
 <script>
@@ -31,4 +35,8 @@ export default {
   }
 }
 </script>
-<style scoped></style>
+<style scoped>
+.btn-primary {
+  background-color: #222222;
+}
+</style>

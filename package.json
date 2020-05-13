@@ -11,7 +11,8 @@
     "generate": "nuxt generate --modern",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest",
-    "prettify": "npx prettier --write \"**/*.{vue,js}\""
+    "prettify": "npx prettier --write \"**/*.{vue,js}\"",
+    "deploy": "firebase deploy --debug --token \"$FIREBASE_TOKEN\"  --only hosting"
   },
   "lint-staged": {
     "*.{js,vue}": "yarn lint --fix",
@@ -21,9 +22,11 @@
     "@nuxtjs/axios": "^5.9.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
+    "@nuxtjs/sitemap": "^2.2.0",
     "core-js": "2",
     "firebase": "^7.6.0",
     "nuxt": "^2.0.0",
+    "nuxt-brotli": "^1.1.1",
     "papercss": "^1.6.1",
     "vuexfire": "^3.2.0"
   },
