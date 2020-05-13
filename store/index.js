@@ -40,7 +40,7 @@ export const actions = {
       .then(() => {
         this.$router.push('/dashboard')
       })
-      .catch(function(error) {
+      .catch((error) => {
         // eslint-disable-next-line
         console.log(error.code)
         // Handle Errors here.
@@ -61,6 +61,10 @@ export const actions = {
         this.$router.push('/')
         // eslint-disable-next-line
         console.log('signed out')
+      })
+      .catch((error) => {
+        // eslint-disable-next-line
+        console.log(error.code)
       })
     commit('setUser', null)
   }
