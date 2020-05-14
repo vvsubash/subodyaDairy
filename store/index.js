@@ -42,7 +42,7 @@ export const actions = {
       })
       .catch((error) => {
         // eslint-disable-next-line
-        console.log(error.code)
+        console.log(error.code, error.message)
         // Handle Errors here.
         // const errorCode = error.code
         // const errorMessage = error.message

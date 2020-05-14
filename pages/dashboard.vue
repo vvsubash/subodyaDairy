@@ -1,8 +1,6 @@
 <template>
   <div class="container">
-    <h3>
-      Hello {{ userName }} please give us some details about you to continue
-    </h3>
+    <h3>Hello please give us some details about you to continue</h3>
     <form class="form-group border col" @submit.prevent="lol">
       <div class="form-group">
         <label for="paperInputs1">Display Name</label>
@@ -15,6 +13,7 @@
       </div>
       <input type="submit" />
     </form>
+    {{ userInfo }}
   </div>
 </template>
 
@@ -22,9 +21,14 @@
 export default {
   data() {
     return {
-      userName: null,
+      // userName: userInfo.name,
       phoneNumber: this.$store.state.user.phoneNumber,
       pinCode: 530003
+    }
+  },
+  computed: {
+    userInfo() {
+      return this.$store.state.getUserInfo.userInfo
     }
   },
   created() {
