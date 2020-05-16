@@ -5,35 +5,52 @@
       <div class="form-group">
         <label for="paperInputs1">Display Name</label>
         <sub></sub>
-        <input v-model="userName" class="input-block" />
+        <input v-model="documents.name" class="input-block" />
       </div>
       <div class="form-group">
         <label for="paperInputs1">Phone Number</label>
-        <input class="input-block" />
+        <input v-model="documents.phoneNumber" class="input-block" />
       </div>
       <input type="submit" />
     </form>
-    {{ userInfo }}
+    {{ documents }}
   </div>
 </template>
 
 <script>
+// import { firestorePlugin } from 'vuefire'
+import db from '~/plugins/firebaseImport'
 export default {
   data() {
     return {
-      // userName: userInfo.name,
+      // userName: 'name',
       phoneNumber: this.$store.state.user.phoneNumber,
-      pinCode: 530003
+      pinCode: 530003,
+      documents: [],
+      id: this.$store.state.user.uid
     }
   },
-  computed: {
-    userInfo() {
-      return this.$store.state.getUserInfo.userInfo
+  // firestore: {
+  //   documents: db.collection('users').doc('gmUukjPFxVX9Qk24wNhIaFXaUv52')
+  // },
+  watch: {
+    id: {
+      // call it upon creation too
+      immediate: true,
+      handler(id) {
+        this.$bind('documents', db.collection('users').doc(id))
+      }
     }
   },
-  created() {
-    this.$store.dispatch('getUserInfo/getUserInfo')
-  },
+  // created() {
+  //   // db.collection('users')
+  //   //   .doc(this.$store.state.user.uid)
+  //   //   .get()
+  //   //   .then((snapshot) => {
+  //   //     const document = snapshot.data()
+  //   //     // do something with document
+  //   //   })
+  // },
   methods: {
     lol() {
       this.$router.push('checkout')
