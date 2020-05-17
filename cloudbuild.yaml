@@ -1,13 +1,13 @@
 steps:
   - name: gcr.io/cloud-builders/gcloud
     args:
-    - kms
-    - decrypt
-    - --ciphertext-file=.env.enc
-    - --plaintext-file=.env
-    - --location=global
-    - --keyring=subodaya
-    - --key=sbd
+      - kms
+      - decrypt
+      - --ciphertext-file=.env.enc
+      - --plaintext-file=.env
+      - --location=global
+      - --keyring=subodaya
+      - --key=sbd
   # Install dependencies
   - name: node
     entrypoint: yarn
@@ -15,7 +15,7 @@ steps:
   # Run custom commands
   - name: node
     entrypoint: yarn
-    args: ['generate']
+    args: ['build']
   # Deploy
   - name: 'gcr.io/ssss-ss/firebase'
     entrypoint: yarn
