@@ -53,7 +53,7 @@ export default {
   // },
   methods: {
     lol() {
-      this.$router.push('checkout')
+      this.$router.push('check2')
     }
   },
   validate({ store }) {
