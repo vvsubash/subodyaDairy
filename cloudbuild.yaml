@@ -15,7 +15,7 @@ steps:
   # Run custom commands
   - name: node
     entrypoint: yarn
-    args: ['build']
+    args: ['generator']
   # Deploy
   - name: 'gcr.io/ssss-ss/firebase'
     entrypoint: yarn
