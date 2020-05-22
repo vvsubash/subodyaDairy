@@ -5,7 +5,7 @@
   </div>
 </template>
 <script>
-import NavBarMain from '~/components/NavBarMain'
+import NavBarMain from '@/components/NavBarMain'
 export default {
   components: {
     NavBarMain

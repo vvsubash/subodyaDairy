@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import UserStateModal from '~/components/UserStateModal.vue'
+import UserStateModal from '@/components/UserStateModal.vue'
 
 export default {
   components: {

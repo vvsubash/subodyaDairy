@@ -47,7 +47,46 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
-    'nuxt-brotli'
+    'nuxt-brotli',
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: process.env.APIKEY,
+          authDomain: process.env.AUTHDOMAIN,
+          databaseURL: process.env.DATABASEURL,
+          projectId: process.env.PROJECTID,
+          storageBucket: process.env.STORAGEBUCKET,
+          messagingSenderId: process.env.MESSAGINGSENDERID,
+          appId: process.env.APPID
+        },
+        services: {
+          firestore: {
+            static: false, // default
+            preload: false, // default
+            chunkName:
+              process.env.NODE_ENV !== 'production' ? 'firebase-auth' : '[id]', // default
+            enablePersistence: {
+              /**
+               * Whether to synchronize the in-memory state of multiple tabs. Setting this
+               * to 'true' in all open tabs enables shared access to local persistence,
+               * shared execution of queries and latency-compensated local document updates
+               * across all connected instances.
+               *
+               * To enable this mode, `synchronizeTabs:true` needs to be set globally in all
+               * active tabs. If omitted or set to 'false', `enablePersistence()` will fail
+               * in all but the first tab.
+               */
+              synchronizeTabs: true
+            }
+            // settings: {
+            //   // Firestore Settings - currently only works in SPA mode
+            // }
+          },
+          auth: true // Just as example. Can be any other service.
+        }
+      }
+    ]
   ],
   pwa: {
     offline: false

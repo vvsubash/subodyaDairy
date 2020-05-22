@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import RazorPayButton from '~/components/RazorPayButton'
+import RazorPayButton from '@/components/RazorPayButton'
 export default {
   components: {
     RazorPayButton

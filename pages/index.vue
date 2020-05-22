@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import HeroSection from '~/components/hero-section'
-import ProductFeatures from '~/components/product-features'
+import HeroSection from '@/components/hero-section'
+import ProductFeatures from '@/components/product-features'
 export default {
   components: {
     HeroSection,

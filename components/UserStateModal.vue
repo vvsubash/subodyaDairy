@@ -22,7 +22,7 @@
 <script>
 // eslint-disable-next-line
 import { mapState } from 'vuex'
-import ReactiveNavButton from '~/components/ReactiveNavButton.vue'
+import ReactiveNavButton from '@/components/ReactiveNavButton.vue'
 
 export default {
   components: {
