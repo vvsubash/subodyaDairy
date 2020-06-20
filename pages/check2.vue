@@ -2,6 +2,7 @@
   <div>
     <input v-model="price" type="number" />
     <RazorPayButton :price="100"> </RazorPayButton>
+    <nuxt-link to="/dashboard">Go To Dashboard</nuxt-link>
   </div>
 </template>
 

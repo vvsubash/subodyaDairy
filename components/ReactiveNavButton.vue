@@ -13,7 +13,7 @@ export default {
       this.$store.state.user == null
         ? // eslint-disable-next-line no-undef
           this.$store.dispatch('signInWithGoogle')
-        : this.$router.push('dashboard')
+        : this.$router.push('check2')
     }
   }
 }
