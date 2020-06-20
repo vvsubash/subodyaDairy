@@ -54,7 +54,8 @@ export default {
     },
     verifySignature(response) {
       this.$axios
-        .post(process.env.PAYMENT_CONFIRMATION_API, response)
+        // eslint-disable-next-line no-undef
+        .post(NUXT_ENV_process.env.PAYMENT_CONFIRMATION_API, response)
         .then((res) => {
           // eslint-disable-next-line no-console
           console.log('PAYMENT RESPONSE', res.data)
